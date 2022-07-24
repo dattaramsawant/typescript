@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Button from './component/Button'
+import Greet from './component/Greet'
+import Oscar from './component/Oscar'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Oscar>
+        <Greet 
+          // name="Datta" 
+          // messageCount={100} 
+          // loggedIn={true} 
+          // employee={['Datta',"parkar","pankaj"]}
+          status='error'
+        />
+      </Oscar>
+      <Button 
+        handleClick={(event,id)=>{
+          console.log('handle click',event,id)
+        }}
+      />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
